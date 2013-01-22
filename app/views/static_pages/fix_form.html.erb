@@ -1,0 +1,734 @@
+<!-- BEGIN FORM -->
+<form class="custom">
+  <fieldset>
+    <legend>Форма - оформление ремонта</legend>
+    <div class="row">
+      <div class="alert-box alert">
+        Перед оформлением ремонта в обязательном порядке должна быть уточнена и записана в мантисе следующая информация
+        <a href="" class="close">&times;</a>
+      </div>
+      <dl class="vertical tabs">
+        <dd class="active"><a href="#vertical1">Информация от клиента</a></dd>
+        <dd><a href="#vertical2">Информация с коммутатора</a></dd>
+        <dd><a href="#vertical3">Информация из биллинга</a></dd>
+        <dd><a href="#vertical4">Комментарий дежурного администратора</a></dd>
+        <dd><a href="#vertical5">Устраненные неисправности при восстановлении клиента</a></dd>
+      </dl>
+      <ul class="vertical tabs-content">
+        <li id="vertical1Tab">
+          <label>
+            <span class="has-tip tip-top noradius" data-width="280" title="В это поле вводится номер телефона клиента">Контактный телефон при обращении клиента</span>
+          </label>
+          <div class="row">
+            <div class="four columns"><input type="text" placeholder="номер телефона" name="name_field_1"></div>
+          </div>
+          <label>
+            <span class="has-tip tip-top noradius" data-width="410" title="Наличие у клиента маршрутизатора или подключение прямо в ПК">
+              Наличие у клиента маршрутизатора или подключение прямо в ПК</span>
+          </label>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>неизвестно</option>
+                  <option>прямо в ПК</option>
+                  <option>маршрутизатор</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">неизвестно</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>неизвестно</li>
+                  <li>прямо в ПК</li>
+                  <li>маршрутизатор</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <label>
+            <span class="has-tip tip-top noradius" data-width="210" title="Указываеться до 5 сетевых карт">
+              Наличие у клиента сетевой карты, их количество, определение конкретной сетевой карты с подключением в Адамант</span>
+          </label>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>неизвестно</option>
+                <option>одна</option>
+                <option>две</option>
+                <option>три</option>
+                <option>четыре</option>
+                <option>пять</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">неизвестно</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>одна</li>
+                  <li>две</li>
+                  <li>три</li>
+                  <li>четыре</li>
+                  <li>пять</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <label>
+            <span class="has-tip tip-top noradius" data-width="280" title="Состояние найденной сетевой карты клиента">
+              Информация о параметрах сетевого подключения</span>
+          </label>
+          <div class="row">
+            <div class="seven columns">
+              <a>наличие драйверов в системе</a>
+                <select style="display:none;" id="customDropdown">
+                  <option SELECTED>неизвестно</option>
+                  <option>драйвер есть</option>
+                  <option>драйвер отсутствует</option>
+                </select>
+                <div class="custom dropdown">
+                  <a href="#" class="current">неизвестно</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>драйвер есть</li>
+                    <li>драйвер отсутствует</li>
+                  </ul>
+                </div>
+                <a>состояние подключения</a>
+                <select style="display:none;" id="customDropdown">
+                  <option SELECTED>неизвестно</option>
+                  <option>включен</option>
+                  <option>выключен</option>
+                </select>
+                <div class="custom dropdown">
+                  <a href="#" class="current">неизвестно</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>включен</li>
+                    <li>выключен</li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="four columns">
+                    <input type="text" placeholder="mac адрес устройства" >
+                  </div>
+                </div>
+                <a>наличие/отсутствие связи на сетевой карте</a>
+                <select style="display:none;" id="customDropdown">
+                  <option SELECTED>неизвестно</option>
+                  <option>связь есть</option>
+                  <option>связь отсутствует</option>
+                </select>
+                <div class="custom dropdown">
+                  <a href="#" class="current">неизвестно</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>связь есть</li>
+                    <li>связь отсутствует</li>
+                  </ul>
+                </div>
+                <a>настройки tcp/ip на сетевой карте</a>
+                <select style="display:none;" id="customDropdown">
+                  <option SELECTED>неизвестно</option>
+                  <option>автоматически</option>
+                  <option>вручную</option>
+                </select>
+                <div class="custom dropdown">
+                  <a href="#" class="current">неизвестно</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>автоматически</li>
+                    <li>вручную</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="nine columns">
+              <a>полученная от DHCP сервера информация</a>
+              <ul class="block-grid four-up mobile">
+                <li><input type="text" placeholder="ip адрес" ></li>
+                <li><input type="text" placeholder="маска" ></li>
+                <li><input type="text" placeholder="маршрут по умолчанию" ></li>
+                <li><input type="text" placeholder="адрес DHCP сервера" ></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="eight columns">
+              <ul class="block-grid two-up mobile">
+                <li><a>Результат попытки переполучить адрес</a></li>
+                <li><span class="secondary label">для Windows систем - ipconfig /release, ipconfig /renew</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>неизвестно</option>
+                <option>ipconfig /release</option>
+                <option>ipconfig /renew</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">неизвестно</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>ipconfig /release</li>
+                  <li>ipconfig /renew</li>
+                </ul>
+            </div>
+          </div>
+        </li>
+        <li id="vertical2Tab">
+          <label>
+            <span class="has-tip tip-top noradius" data-width="500" title="В этом разделе информация заполняеться из коммутатора где построен клиент">Информация с коммутатора</span>
+          </label>
+          <div class="row">
+            <div class="seven columns">
+              <a>Модель коммутатора</a>
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>неизвестно</option>
+                <option>Foxgate S-6008-S2L2</option>
+                <option>Foxgate S-6024-S2L2</option>
+                <option>Foxgate S-6048-S4L2</option>
+                <option>Foxgate S-6224-S2</option>
+                <option>Foxgate S-6224-S4</option>
+                <option>Dlink 3200-26</option>
+                <option>Dlink 3200-28</option>
+                <option>Dlink DGS-3420-26SC</option>
+                <option>Dlink DES-3526</option>
+                <option>Linksys SPS224G4</option>
+                <option>Zyxel ES-2024A</option>
+                <option>Zyxel ES-2108-G</option>
+                <option>Zyxel ES-3124-4F</option>
+                <option>Zyxel MES-3528</option>
+                <option>Zyxel GS-3012F</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">неизвестно</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>Foxgate S-6008-S2L2</li>
+                  <li>Foxgate S-6024-S2L2</li>
+                  <li>Foxgate S-6048-S4L2</li>
+                  <li>Foxgate S-6224-S2</li>
+                  <li>Foxgate S-6224-S4</li>
+                  <li>Dlink 3200-26</li>
+                  <li>Dlink 3200-28</li>
+                  <li>Dlink DGS-3420-26SC</li>
+                  <li>Dlink DES-3526</li>
+                  <li>Linksys SPS224G4</li>
+                  <li>Zyxel ES-2024A</li>
+                  <li>Zyxel ES-2108-G</li>
+                  <li>Zyxel ES-3124-4F</li>
+                  <li>Zyxel MES-3528</li>
+                  <li>Zyxel GS-3012F</li>
+                </ul>
+              </div>
+              <a>Порт клиента</a>
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>неизвестно</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+                <option>32</option>
+                <option>33</option>
+                <option>34</option>
+                <option>35</option>
+                <option>36</option>
+                <option>37</option>
+                <option>38</option>
+                <option>39</option>
+                <option>40</option>
+                <option>41</option>
+                <option>42</option>
+                <option>43</option>
+                <option>44</option>
+                <option>45</option>
+                <option>46</option>
+                <option>47</option>
+                <option>48</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">неизвестно</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li>10</li>
+                  <li>11</li>
+                  <li>12</li>
+                  <li>13</li>
+                  <li>14</li>
+                  <li>15</li>
+                  <li>16</li>
+                  <li>17</li>
+                  <li>18</li>
+                  <li>19</li>
+                  <li>20</li>
+                  <li>21</li>
+                  <li>22</li>
+                  <li>23</li>
+                  <li>24</li>
+                  <li>25</li>
+                  <li>26</li>
+                  <li>27</li>
+                  <li>28</li>
+                  <li>29</li>
+                  <li>30</li>
+                  <li>31</li>
+                  <li>32</li>
+                  <li>33</li>
+                  <li>34</li>
+                  <li>35</li>
+                  <li>36</li>
+                  <li>37</li>
+                  <li>38</li>
+                  <li>39</li>
+                  <li>40</li>
+                  <li>41</li>
+                  <li>42</li>
+                  <li>43</li>
+                  <li>44</li>
+                  <li>45</li>
+                  <li>46</li>
+                  <li>47</li>
+                  <li>48</li>
+                </ul>
+              </div>
+              <a>IP - address коммутатора</a>
+              <div class="row">
+                <div class="four columns">
+                  <input type="text" placeholder="IP address" >
+                </div>
+              </div>
+              <span class="has-tip tip-top noradius" data-width="450" title="Проверка соответстветвия настроенного порта оборудования и реального включения клиента - выполняется при условии наличия связи между оборудованием клиента и свичем путем выключения и последующего включения кабеля клиентом">
+                <a>Проверка соответстветвия настроенного порта</a>
+              </span>
+              <div class="row">
+                <div class="seven columns">
+                  <select style="display:none;" id="customDropdown">
+                      <option SELECTED>неизвестно</option>
+                      <option>линк есть</option>
+                      <option>линка нет</option>
+                  </select>
+                  <div class="custom dropdown">
+                    <a href="#" class="current">неизвестно</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>линк есть</li>
+                      <li>линка нет</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <a>проверка соответствия mac адреса названного клиентом и наших БД</a>
+              <div class="row">
+                <div class="eight columns">
+                  <select style="display:none;" id="customDropdown">
+                      <option SELECTED>неизвестно</option>
+                      <option>адрес совпадает</option>
+                      <option>адрес не совпадает</option>
+                  </select>
+                  <div class="custom dropdown">
+                    <a href="#" class="current">неизвестно</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>адрес совпадает</li>
+                      <li>адрес не совпадает</li>
+                    </ul>
+                  </div>
+                  <span class="secondary label">В случае несоответствия, нужно исправить и проверить клиента</span>
+                </div>
+              </div>
+              <a>Проверка настроек коммутатора</a>
+              <div class="row">
+                <div class="nine columns">
+                  <select style="display:none;" id="customDropdown">
+                      <option SELECTED>неизвестно</option>
+                      <option>привязка MAC и VLAN правильная</option>
+                      <option>отсутствует привязка MAC  и Vlan</option>
+                  </select>
+                  <div class="custom dropdown">
+                    <a href="#" class="current">неизвестно</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>привязка MAC и VLAN правильная</li>
+                      <li>отсутствует привязка MAC  и Vlan</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <span class="has-tip tip-top noradius" data-width="450" title="Проверка правильности построения vlan в сети, путем проверки наличия mac адреса 00:04:96:36:86:E6 в соответствующем vlan">
+                <a>Проверка правильности построения vlan в сети</a> 
+              </span>
+              <div class="row">
+                <div class="eight columns">
+                  <select style="display:none;" id="customDropdown">
+                      <option SELECTED>неизвестно</option>
+                      <option>построен</option>
+                      <option>не построен</option>
+                  </select>
+                  <div class="custom dropdown">
+                    <a href="#" class="current">неизвестно</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>построен</li>
+                      <li>не построен</li>
+                    </ul>
+                  </div>
+                  <span class="secondary label">отсутствие mac адреса предполагает недостроенность или некорретное построение vlan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li id="vertical3Tab">
+          <label>
+            <span class="has-tip tip-top noradius" data-width="390" title="В этом разделе информация заполняеться из билинга клиента">Информация из биллинга</span>
+          </label>
+          <a>Состояние подключения - открыт/закрыт</a>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>Неизвестно</option>
+                <option>открыт</option>
+                <option>закрыт</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">Неизвестно</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>открыт</li>
+                  <li>закрыт</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a>Соответствие IP адреса в DHCP и в биллинге</a>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>Неизвестно</option>
+                <option>соответствует</option>
+                <option>не соответствует</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">Неизвестно</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>соответствует</li>
+                  <li>не соответствует</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li id="vertical4Tab">
+          <label>
+            <span class="has-tip tip-top noradius" data-width="280" title="Комментарий Дежурного Администратора">Комментарий</span>
+          </label>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>Выберете вашу фамилию</option>
+                <option>Капранов О.Г.</option>
+                <option>Кульцанов С.Н.</option>
+                <option>Пинчук Ю.В.</option>
+                <option>Храпач А.В.</option>
+                <option>Фесюк М.Н.</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">Выберете вашу фамилию</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>Капранов О.Г.</li>
+                  <li>Кульцанов С.Н.</li>
+                  <li>Пинчук Ю.В.</li>
+                  <li>Храпач А.В.</li>
+                  <li>Фесюк М.Н.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <textarea placeholder="Введите текст вашего комментария"></textarea>
+            </div>
+          </div>
+          <a><span class="round alert label">Линка нет</span>, на передергивание <span class="round alert label">не реагирует</span> - состояние при подключении на прямую "<span class="round alert label">сетевой кабель не подключен</span>"</a>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>не проверял</option>
+                <option>проверил</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">не проверял</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>проверил</li>
+                  <li>не проверял</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns">
+              <span class="round success label">О платном ремонте уведомил</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>Неизвестно</option>
+                <option>ДА</option>
+                <option>НЕТ</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">Неизвестно</a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>ДА</li>
+                  <li>НЕТ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns">
+              <span class="round alert label"> У абонента поламался RJ-45</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>Неизвестно</option>
+                <option>ДА</option>
+                <option>НЕТ</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current"></a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>ДА</li>
+                  <li>НЕТ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="seven columns">
+              <span class="round success label">Желательно ремонт сегодня в течении дня (со слов абонента)</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns">
+              <select style="display:none;" id="customDropdown">
+                <option SELECTED>Неизвестно</option>
+                <option>ДА</option>
+                <option>НЕТ</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current"></a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>ДА</li>
+                  <li>НЕТ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li id="vertical5Tab">
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Замена RJ-45 у клиента</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Замена RJ-45 на порту коммутатора</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Поломана розетка у клиента</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Сгорела сетевая карта клиента</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Перетяжка кабеля в квартире клиента</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Не работает компьютер клиента</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Настройка WiFi маршрутизатора клиента</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Настройка сетевой карты клиента</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Жалоба на скорость</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Проблемы с тарифным планом</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Поврежден кабель - можно исправить</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Настройка Windows - сетевого подключения, антивируса, брандмауэра</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Перетяжка кабеля до коммутатора</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Сгорел порт на коммутаторе</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Замена коммутатора</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Другие работы</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА клиент не построен в базе mysq</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА отсутствовал мак адрес клиента на коммутаторе</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА мак адрес клиента не зарегистрирован</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА клиент построен на другом влане</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА проброшенный влан не работает</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА не все настройки порта пробиты</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА у клиента не включен сетевой интерфейс</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА у клиента висит WiFi маршрутизатор</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА у клиента статический адрес</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА связь есть но DNS не работает - антивирусник лецензия</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА клиент оказался на другом коммутаторе</a></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="seven columns offset-by-one">
+              <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> <a>Ошибка ДА - другие</a></label>
+            </div>
+          </div>
+        </li> 
+      </ul>
+    </div>
+  </fieldset>
+</form>
+<!--  END FORM  -->
+
+<div class="row">
+  <div class="three columns offset-by-five">
+    <a href="#" class="button" data-reveal-id="myModal">Оформить ремонт</a>
+  </div>
+</div>
+
+<div id="myModal" class="reveal-modal">
+  <h2>Тест тест Тест</h2>
+  <a value="name_field_1"></a>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

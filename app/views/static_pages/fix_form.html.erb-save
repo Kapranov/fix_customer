@@ -1,0 +1,56 @@
+<!-- BEGIN FORM -->
+<form>
+  <fieldset>
+    <legend>ДA Оформление Ремонта</legend>
+    <div class="row">
+      <p>Перед оформлением ремонта в обязательном порядке должна быть уточнена и записана в мантисе следующая информация:</p>
+      <div class="five columns">
+        <label>Контактный телефон при обращении клиента</label>
+        <input type="text">
+
+        <label>Наличие у клиента маршрутизатора или подключение прямо в ПК</label>
+        <select>
+          <option></option>
+          <option>прямо в ПК</option>
+          <option>маршрутизатор</option>
+        </select>
+
+        <label>Наличие у клиента сетевой карты</label>
+        <select>
+          <option>одна</option>
+          <option>две</option>
+          <option>три</option>
+          <option>четыре</option>
+          <option>пять</option>
+        </select>
+
+         <!-- Custom Selects -->
+           <label for="customDropdown">Dropdown Label</label>
+             <select style="display:none;" id="customDropdown">
+                   <option SELECTED>This is a dropdown</option>
+                       <option>This is another option</option>
+                           <option>Look, a third option</option>
+                             </select>
+                               <div class="custom dropdown">
+                                     <a href="#" class="current">
+                                             This is a dropdown
+                                                 </a>
+                                                     <a href="#" class="selector"></a>
+                                                         <ul>
+                                                                 <li>This is a dropdown</li>
+                                                                       <li>This is another option</li>
+                                                                             <li>Look, a third option</li>
+                                                                                 </ul>
+
+      </div>
+    </div>
+  </fieldset>
+</form>
+<!--  END FORM  -->
+
+<a href="#" class="button" data-reveal-id="myModal">Результат</a>
+
+<div id="myModal" class="reveal-modal">
+<h2>Тест тест Тест</h2>
+<a class="close-reveal-modal">&#215;</a>
+</div>

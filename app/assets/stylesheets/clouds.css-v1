@@ -1,0 +1,40 @@
+/* 
+    Starry Night DEMO
+    chriscoyier@gmail.com
+    http://chriscoyier.net
+*/
+
+html { overflow-y: scroll; }
+
+@-webkit-keyframes STAR-MOVE {
+	from {
+		left: 0;
+		top: 0;
+	}
+	to { 
+		left: -10000px;
+		top: -000px;
+	}
+}
+
+#background {
+	background:  url(background.jpg) repeat-x 5% 5%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	xz-index: 100;
+}
+
+#midground {
+	background:url(midground.png) repeat-x top;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	xz-index: 200;
+}
+
+#foreground {
+	background: url(foreground.png) repeat-x  top;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	xz-index: 300;
+	
+}
